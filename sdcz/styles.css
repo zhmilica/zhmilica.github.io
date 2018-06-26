@@ -1,0 +1,360 @@
+
+
+/**********************************
+  				General
+**********************************/
+
+* {
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	margin: 0 auto;
+	background-image: url('img/collage1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+body,
+header,
+nav,
+section#main,
+footer
+ {
+    width: 1280px;
+    margin: 0 auto;
+    font-family: 'Roboto', Verdana, sans-serif;
+}
+
+body {
+	font-size: 1em;
+    word-wrap: break-word;
+}
+
+h4 {
+	text-align: center;
+}
+
+p { 
+    font-size: 1em;
+    font-weight: 400;
+    text-indent: 30px;
+    text-align: justify;
+}
+
+/**********************************
+  				Clear
+**********************************/
+div.clear {
+	content: "";
+	display: table;
+	clear: both;
+	height: 250px;
+}
+
+.clear-bottom {
+	content: "";
+	display: table;
+	clear: both;
+	visibility: hidden;
+}
+
+/**********************************
+  				Header
+**********************************/
+
+header {
+	height: 200px;
+	background-image: url('img/crvenazv.jpg');
+	background-position: top;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+header h1 {
+	font-size: 3em;
+	color: white;
+	text-align: center;
+	padding: 45px 20px 45px 0;
+	float: right;
+}
+
+header h1 span {
+	text-transform: uppercase;
+}
+
+header div img {
+    float: left;
+    position: relative;
+    left: 60px;
+}
+
+/**********************************
+  				Nav
+**********************************/
+nav {
+	height: 50px;
+    position: fixed;
+    top: 200px;
+    background-color: #181818;
+    clear: both;
+    z-index: 1;
+
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+nav ul li {
+	display: inline-block;
+	background-color: transparent;
+}
+
+nav ul li a {
+	display: block;
+	padding: 0 10px;
+	color: #fff;
+	font-size: 20px;
+	line-height: 50px;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+	border-bottom:  5px solid transparent;
+	transition: border-bottom-color 0.5s ease-out;
+ 	 -webkit-transition: border-bottom-color 0.5s ease-out;
+}
+
+nav ul li a:hover {
+	background-color: #000000;
+	border-bottom-color: #f39c12;
+	font-family: Verdana, sans-serif;
+}
+
+nav ul li a.active {
+	background-color: #666;
+	color: #fff;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px;
+}
+
+nav ul li:hover > ul {
+	display: inherit;
+}
+
+/* Show Dropdown */
+nav ul ul li {
+	position: relative;
+	width: 170px;
+	display: list-item;
+	float: none;
+}
+.scrollable-menu {
+	overflow: auto;
+	height: 350px;
+	white-space: nowrap;
+	position: fixed;
+	top: 254px;
+}
+.scrollable-menu:last-child {
+	background-color: #0e0e0e;
+}
+.scrollable-menu li:hover a{
+	background-color: #7d7e7d;
+}
+
+.container {
+	background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+  
+  /* Box Shadow */
+	 -webkit-box-shadow: #333 1px 1px 13px;
+	 -moz-box-shadow: #333 1px 1px 13px; /* color, h-offset, v-offset, blur, spread */
+	 box-shadow: #333 1px 1px 13px; /* inset is optional */
+}
+  
+
+/**********************************
+      Main (Content + Sidebar)
+**********************************/
+#main {
+    background-color: #f5f6fa;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    overflow: auto;
+    padding: 30px 0;
+}
+
+#main h2,
+#content h2 {
+	display: none;
+}
+#main-container {
+	position: relative;
+}
+
+#content {
+	width: 950px;
+	background-color: #f5f6fa;
+    float: left;
+    margin-bottom: 70px;
+    padding: 0 30px 0 60px;
+}
+
+#sidebar {
+	margin-top: 50px;
+	padding: 0 20px;
+	width: 330px;
+	background-color: #f5f6fa;
+    float: right;
+}
+
+#sidebar ul {
+	list-style-type: none;
+	padding: 20px;
+}
+
+#sidebar ul li a {
+	font-size: 1.2em;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	padding: 0 20px;
+}
+
+#sidebar ul li:hover a {
+	color: #181818;
+	font-size: 1.3em;
+}
+
+#sidebar h3 {
+	margin-bottom: 20px;
+	font-size: 1.4em;
+}
+
+section article {
+	margin: 50px 0;
+}
+
+article h4 {
+	margin-bottom: 20px;
+	font-size: 1.3em;
+}
+
+article img {
+	margin: 10px 15px;
+}
+
+article img.left {
+	float: left;
+}
+
+article img.right {
+	float: right;
+}
+
+article.records {
+	padding-top: 120px;
+}
+
+figure.container {
+	display: block;
+}
+
+img.image {
+	display: block;
+	transition: .5s ease;
+}
+
+img.image:hover {
+	opacity: .3;
+	
+}
+/**********************************
+  				Table
+**********************************/
+table {
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+}
+
+table caption {
+	padding: 20px 0;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/**********************************
+  				Footer
+**********************************/
+
+footer {
+	height: 100px;
+	background-color: #181818;
+	position: fixed;
+	bottom: 0;
+    clear: both;
+    color: #fff;
+}
+
+footer a {
+	color: #fff;
+}
+
+.tickets {
+	width: 500px;
+	position: absolute;
+	right: 30px;
+	top: 5px;
+	margin-top: 20px;
+	padding-left: 10px;
+}
+
+.tickets p {
+	font-size: 1.1em;
+	text-indent: 0;
+	padding: 5px;
+}
+
+address {
+	display: inline-block;
+	margin-right: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-size: .7em;
+}
+
+.addresses {
+	width: 800px;
+	padding: 10px 30px;
+	margin-left: 40px;
+	font-style: italic;
+	font-style: .9em;
+}
